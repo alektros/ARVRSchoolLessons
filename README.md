@@ -5,7 +5,7 @@ Software requirement:
 ------
 * Unity 2018.2.x
 
-Using older version can cause some issues with Vuforia.
+Usage of older Unity version can cause some issues with Vuforia.
 
 
 Lesson 03
