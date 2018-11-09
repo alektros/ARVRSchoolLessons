@@ -57,6 +57,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GoogleVR\Demos\Editor\DemoInputManagerEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Demos\Editor\PermissionsDemoBuildProcessor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\Controller\GvrControllerVisualEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\Controller\GvrLaserPointerEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\Controller\GvrLaserVisualEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\Controller\GvrTooltipEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\EventSystem\GvrPointerScrollInputEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrBuildProcessor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrEditorEmulatorEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrEditorMenu.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrEditorSettings.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioListenerEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioRoomEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSoundfieldEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSourceEditor.cs" />
     <Compile Include="Assets\Vuforia\Editor\Scripts\OpenSourceInitializer.cs" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
@@ -64,6 +79,9 @@
     <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
     <None Include="Assets\Editor\Vuforia\ForPrint\ModelTarget\readme_3dprint.txt" />
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -72,9 +90,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -324,6 +339,9 @@
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.13f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>C:/Users/Alex/Desktop/ARVRSchoolLessons/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
