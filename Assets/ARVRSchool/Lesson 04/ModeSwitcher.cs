@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR;
 using Vuforia;
@@ -7,35 +8,69 @@ namespace Ru.Funreality.ARVRLessons.Lesson04
 {
     public class ModeSwitcher : MonoBehaviour
     {
-        [SerializeField] private Camera           _arCamera;
-        [SerializeField] private Camera           _camera3D;
-        [SerializeField] private Camera           _vrCamera;
-        [SerializeField] private VuforiaBehaviour _vuforiaBehaviour;
+        [SerializeField] private Camera _arCamera;
+        [SerializeField] private Camera _camera3D;
+        [SerializeField] private Camera _vrCamera;
+        [SerializeField] private Mode   _currentMode = Mode.D3;
+
+        public enum Mode
+        {
+            AR,
+            D3,
+            VR
+        }
+
+        public void SetMode(Mode mode)
+        {
+            switch (mode)
+            {
+                case Mode.AR:
+                    SwitchToAR();
+                    break;
+                case Mode.D3:
+                    SwitchTo3D();
+                    break;
+                case Mode.VR:
+                    SwitchToVR();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("mode", mode, null);
+            }
+        }
 
         public void SwitchTo3D()
         {
-            StartCoroutine(LoadDevice("None"));
+            StartCoroutine(LoadXRDevice("None"));
             DisableCameras();
             _camera3D.gameObject.SetActive(true);
+            _currentMode = Mode.D3;
         }
 
         public void SwitchToAR()
         {
+            StartCoroutine(LoadXRDevice("None"));
             DisableCameras();
             _arCamera.gameObject.SetActive(true);
-            InitializeVuforia();
+            _currentMode = Mode.AR;
         }
 
         public void SwitchToVR()
         {
             DisableCameras();
-            InitializeGVR();
+            StartCoroutine(LoadXRDevice("Cardboard"));
             _vrCamera.gameObject.SetActive(true);
+            _currentMode = Mode.VR;
         }
 
-        private void Awake()
+        private IEnumerator Start()
         {
-            SwitchTo3D();
+            while (VuforiaRuntime.Instance.InitializationState != VuforiaRuntime.InitState.INITIALIZED)
+            {
+                Debug.Log(VuforiaRuntime.Instance.InitializationState);
+                yield return new WaitForEndOfFrame();
+            }
+
+            SetMode(_currentMode);
         }
 
         private void DisableCameras()
@@ -45,33 +80,23 @@ namespace Ru.Funreality.ARVRLessons.Lesson04
             _camera3D.gameObject.SetActive(false);
         }
 
-        private void InitializeVuforia()
-        {
-            StartCoroutine(InitVuforiaRoutine());
-        }
-
-        private void InitializeGVR()
-        {
-            StartCoroutine(LoadDevice("Cardboard"));
-        }
-
-        private IEnumerator LoadDevice(string newDevice)
+        private IEnumerator LoadXRDevice(string newDevice)
         {
             XRSettings.LoadDeviceByName(newDevice);
             yield return null;
             XRSettings.enabled = true;
         }
 
-        private IEnumerator InitVuforiaRoutine()
+        private void Update()
         {
-            VuforiaRuntime.Instance.InitVuforia();
-            while (VuforiaRuntime.Instance.InitializationState != VuforiaRuntime.InitState.INITIALIZED)
+            if (Input.GetKey(KeyCode.Escape))
             {
-                Debug.Log(VuforiaRuntime.Instance.InitializationState);
-                yield return new WaitForEndOfFrame();
+                if (_currentMode == Mode.VR)
+                {
+                    Debug.Log("Exit from VR");
+                    SetMode(Mode.D3);
+                }
             }
-
-            _vuforiaBehaviour.enabled = true;
         }
     }
 }
