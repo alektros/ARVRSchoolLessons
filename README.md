@@ -18,3 +18,13 @@ See folder **Assets/ARVRSchool/Lesson 03**
 - Setup ImageTarget (size, extended tracking)
 - Development of custom TrackableEventHandler
 - Splitting tracking system and content with MarkerController
+
+
+Lesson 04
+------
+See folder **Assets/ARVRSchool/Lesson 04**
+
+**Key points:**
+- Import with GVR
+- Setup VR (PlayerSettings -> XRSettings)
+- Switch between modes (see ModeSwitcher.cs)
