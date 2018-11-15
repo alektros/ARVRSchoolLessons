@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Ru.Funreality.ARVRLessons.Lesson03
@@ -7,26 +8,26 @@ namespace Ru.Funreality.ARVRLessons.Lesson03
     {
         [SerializeField] private ContentData[] _data;
 
-
         // Use this for initialization
         void Start()
         {
             foreach (var handler in _data)
             {
                 handler.Handler.OnMarkerFound += OnMarkerFound;
-                handler.Handler.OnMarkerLost += OnMarkerLost;
+                handler.Handler.OnMarkerLost  += OnMarkerLost;
             }
         }
-
 
         private void OnMarkerLost(CustomTrackableEventHandler handler)
         {
             Debug.LogWarning("OnMarkerLost " + handler.name);
+            _data.First(x => x.Handler == handler).Content.SetActive(false);
         }
 
         private void OnMarkerFound(CustomTrackableEventHandler handler)
         {
             Debug.LogWarning("OnMarkerFound " + handler.gameObject.name);
+            _data.First(x => x.Handler == handler).Content.SetActive(true);
         }
 
         private void Update()
@@ -41,7 +42,7 @@ namespace Ru.Funreality.ARVRLessons.Lesson03
         public struct ContentData
         {
             public CustomTrackableEventHandler Handler;
-            public GameObject Content;
+            public GameObject                  Content;
 
             public void Update()
             {

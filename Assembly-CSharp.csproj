@@ -59,6 +59,13 @@
     <Compile Include="Assets\ARVRSchool\Lesson 03\Scripts\CustomTrackableEventHandler.cs" />
     <Compile Include="Assets\ARVRSchool\Lesson 03\Scripts\MarkerController.cs" />
     <Compile Include="Assets\ARVRSchool\Lesson 04\Scripts\ModeSwitcher.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\ColorChanger.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\LevelConstructor.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\LevelController.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\LevelInfoAsset.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\Tile.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\Tower.cs" />
+    <Compile Include="Assets\ARVRSchool\Lesson 05\Scripts\TriggerHandler.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\GVRDemoManager.cs" />
