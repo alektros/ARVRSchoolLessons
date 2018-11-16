@@ -4,18 +4,22 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
 {
     using UnityEngine;
 
+    /// <summary>
+    /// Компонент, управляющий башней
+    /// </summary>
     public class Tower : MonoBehaviour
     {
         [SerializeField] private Color        _defaultColor;
         [SerializeField] private Color        _errorColor;
-        
-        
         [SerializeField] private ColorChanger _colorChanger;
-        
-        
-        public Action<Tower, int> OnHealthPointChaged = delegate(Tower i, int arg2) {  };
-        
-        public Action<Tower> OnStateChanged = delegate(Tower tower) {  };
+        /// <summary>
+        /// Вызывается, когда изменяется количество HealthPoints
+        /// </summary>
+        public Action<Tower, int> OnHealthPointChanged = delegate { };
+        /// <summary>
+        /// Вызывается, когда изменяется состояние башни
+        /// </summary>
+        public Action<Tower> OnStateChanged = delegate { };
 
         public void SetDefaultColor()
         {
@@ -39,11 +43,8 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
 
         private void LooseHealth()
         {
-            // 
-            //
-            //
             int currentHP = 12;
-            OnHealthPointChaged(this, currentHP);
+            OnHealthPointChanged(this, currentHP);
         }
     }
 }
