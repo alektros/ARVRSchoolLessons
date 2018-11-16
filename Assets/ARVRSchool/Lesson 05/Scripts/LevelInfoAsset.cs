@@ -11,6 +11,7 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
         [SerializeField] [Range(5, 15)] private int           _battleFieldWidth  = 10;
         [SerializeField] [Range(5, 15)] private int           _battleFieldHeight = 10;
         [SerializeField]                private Coordinates[] _wayPoints;
+        public int WaveCount;
         public int BattleFieldWidth
         {
             get { return _battleFieldWidth; }

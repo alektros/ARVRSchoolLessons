@@ -6,10 +6,15 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
 
     public class Tile : MonoBehaviour
     {
+        public Transform Anchor;
         public                   LevelInfoAsset.Coordinates Coordinates { get; set; }
         public                   TileType                   Type        { get; set; }
+        
         public                   Action<Tile, Collider>     OnTriggerEntered = delegate { };
         public                   Action<Tile, Collider>     OnTriggerExited  = delegate { };
+        
+        
+        
         [SerializeField] private TriggerHandler             _handler;
 
         public enum TileType

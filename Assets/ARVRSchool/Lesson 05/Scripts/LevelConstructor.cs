@@ -23,6 +23,8 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
 
             float globalXOffset = -asset.BattleFieldWidth  / 2f;
             float globalZOffset = -asset.BattleFieldHeight / 2f;
+            // float globalXOffset = 0;
+            // float globalZOffset = 0;
             for (int x = 0; x < asset.BattleFieldWidth; x++)
             {
                 for (int z = 0; z < asset.BattleFieldHeight; z++)

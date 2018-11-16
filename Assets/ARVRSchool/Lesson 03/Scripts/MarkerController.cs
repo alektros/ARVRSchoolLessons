@@ -18,6 +18,15 @@ namespace Ru.Funreality.ARVRLessons.Lesson03
             }
         }
 
+        public void SetContentAnchored(GameObject go, bool anchored)
+        {
+           var contentData = _data.First(x => x.Content == go);
+            if (contentData != null)
+            {
+                contentData.Anchored = anchored;
+            }
+        }
+
         private void OnMarkerLost(CustomTrackableEventHandler handler)
         {
             Debug.LogWarning("OnMarkerLost " + handler.name);
@@ -39,15 +48,23 @@ namespace Ru.Funreality.ARVRLessons.Lesson03
         }
 
         [Serializable]
-        public struct ContentData
+        public class ContentData
         {
             public CustomTrackableEventHandler Handler;
             public GameObject                  Content;
 
+            public bool Anchored;
+
+           
+            
             public void Update()
             {
-                Content.transform.position = Handler.transform.position;
-                Content.transform.rotation = Handler.transform.rotation;
+                if (Anchored)
+                {
+                    Content.transform.position = Handler.transform.position;
+                    Content.transform.rotation = Handler.transform.rotation;
+                }
+              
             }
         }
     }
