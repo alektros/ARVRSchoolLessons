@@ -38,4 +38,4 @@ See folder **Assets/ARVRSchool/Lesson 05/
 - Develop architecture base of the Tower Defense Game
 - Draw simple class diagram of the main classes:
 
-![alt text](https://raw.githubusercontent.com/alektros/ARVRSchoolLessons/feature/lesson_05/Assets/ARVRSchool/Lesson%2005/Doc/ARVRLessonProject.png)
+![alt text](https://github.com/alektros/ARVRSchoolLessons/blob/master/Assets/ARVRSchool/Lesson%2005/Doc/ARVRLessonProject.png)
