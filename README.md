@@ -39,3 +39,15 @@ See folder **Assets/ARVRSchool/Lesson 05/
 - Draw simple class diagram of the main classes:
 
 ![alt text](https://github.com/alektros/ARVRSchoolLessons/blob/master/Assets/ARVRSchool/Lesson%2005/Doc/ARVRLessonProject.png)
+
+Lesson 06
+------
+See folder **Assets/ARVRSchool/Lesson 06/
+
+- Develop simple TowerInfoViewer with customizable architecture
+- Abstract logic of working with enumerable data to simple framework with three classes: Data, DataView<Data>, EnumerableDataController<Data>
+- Show some tips and tricks using in adaptive layouting
+- Show how can use RenderTexture and how to render image from camera to UI
+- Class Diagramm of the lesson is shown below:
+
+![alt text](https://raw.githubusercontent.com/alektros/ARVRSchoolLessons/master/Assets/ARVRSchool/Lesson%2006/Doc/Lesson%2006.png)
