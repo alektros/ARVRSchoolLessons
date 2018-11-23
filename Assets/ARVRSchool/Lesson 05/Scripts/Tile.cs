@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.UI;
 
 namespace Ru.Funreality.ARVRLessons.Lesson05
 {
@@ -25,6 +26,7 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
 
         private void Awake()
         {
+            
             _handler.OnTriggerEntered += delegate(Collider collision) { OnTriggerEntered(this, collision); };
             _handler.OnTriggerExited  += delegate(Collider collision) { OnTriggerExited(this, collision); };
         }
