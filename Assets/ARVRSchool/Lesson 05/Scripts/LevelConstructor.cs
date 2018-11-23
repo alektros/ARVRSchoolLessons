@@ -17,14 +17,17 @@ namespace Ru.Funreality.ARVRLessons.Lesson05
         [SerializeField] private GameObject _grassPrefab;
         [SerializeField] private Transform  _battleFieldRoot;
 
+        /// <summary>
+        /// Конструируем уровень на основе LevelInfo и возвращаем лист тайлов
+        /// </summary>
+        /// <param name="asset"></param>
+        /// <returns></returns>
         public List<Tile> Construct(LevelInfoAsset asset)
         {
             List<Tile> result = new List<Tile>();
 
             float globalXOffset = -asset.BattleFieldWidth  / 2f;
             float globalZOffset = -asset.BattleFieldHeight / 2f;
-            // float globalXOffset = 0;
-            // float globalZOffset = 0;
             for (int x = 0; x < asset.BattleFieldWidth; x++)
             {
                 for (int z = 0; z < asset.BattleFieldHeight; z++)
