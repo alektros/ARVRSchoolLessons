@@ -230,6 +230,7 @@
     <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
+    <None Include="Assets\ARVRSchool\Lesson 07\NewUnlitShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
