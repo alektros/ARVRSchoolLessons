@@ -59,4 +59,4 @@ See folder **Assets/ARVRSchool/Lesson 07/
 **Key points:**
 - Setup barrel model with Standard Shader (Roughness setup)
 - Develop simple unlit shader with vertex and fragment shader's
-- Simple simple shader with mask using Shader Forge
+- Develop simple shader with mask using Shader Forge
