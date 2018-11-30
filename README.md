@@ -60,3 +60,4 @@ See folder **Assets/ARVRSchool/Lesson 07/
 - Setup barrel model with Standard Shader (Roughness setup)
 - Develop simple unlit shader with vertex and fragment shader's
 - Develop simple shader with mask using Shader Forge
+- Develop sample of script animation (BarrelAnimation.cs)
