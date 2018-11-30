@@ -1,28 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Linq;
 
-public class BarrelAnimation : MonoBehaviour
+namespace Ru.Funreality.ARVRLessons.Lesson07
 {
+    using UnityEngine;
 
-	public Shader shader;
-	public Renderer barrelRender;
-	private Material mat;
-	void Start ()
-	{
-		mat = barrelRender.material;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		mat.shader = shader;
-		mat.SetColor("_Color", Color.Lerp(Color.green, Color.red, Mathf.Sin(Time.time)));
-		
-	}
+    public class BarrelAnimation : MonoBehaviour
+    {
+        [SerializeField] private Renderer[] _barrelRenders;
+        [SerializeField] private Color      _startColor;
+        [SerializeField] private Color      _endColor;
+        private                  Material[] _materials;
+        private                  void       Start() { _materials = _barrelRenders.Select(x => x.material).ToArray(); }
 
-	private void OnDrawGizmos()
-	{
-		
-	}
+        private void Update()
+        {
+            var color = Color.Lerp(_startColor, _endColor, Mathf.Sin(Time.time));
+            foreach (var material in _materials)
+            {
+                material.SetColor("_Color", color);
+            }
+        }
+    }
 }
