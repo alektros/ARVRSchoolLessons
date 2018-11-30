@@ -1,4 +1,4 @@
-﻿Shader "Unlit/BarrelShader"
+﻿Shader "Lesson 07/Barrel Unlit"
 {
 	Properties
 	{
