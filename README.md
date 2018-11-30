@@ -34,7 +34,6 @@ Lesson 05
 See folder **Assets/ARVRSchool/Lesson 05/
 
 **Key points:**
-
 - Develop architecture base of the Tower Defense Game
 - Draw simple class diagram of the main classes:
 
@@ -44,6 +43,7 @@ Lesson 06
 ------
 See folder **Assets/ARVRSchool/Lesson 06/
 
+**Key points:**
 - Develop simple TowerInfoViewer with customizable architecture
 - Abstract logic of working with enumerable data to simple framework with three classes: Data, DataView<Data>, EnumerableDataController<Data>
 - Show some tips and tricks using in adaptive layouting
@@ -51,3 +51,12 @@ See folder **Assets/ARVRSchool/Lesson 06/
 - Class Diagramm of the lesson is shown below:
 
 ![alt text](https://raw.githubusercontent.com/alektros/ARVRSchoolLessons/master/Assets/ARVRSchool/Lesson%2006/Doc/Lesson%2006.png)
+
+Lesson 07
+------
+See folder **Assets/ARVRSchool/Lesson 07/
+
+**Key points:**
+- Setup barrel model with Standard Shader (Roughness setup)
+- Develop simple unlit shader with vertex and fragment shader's
+- Simple simple shader with mask using Shader Forge
