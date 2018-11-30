@@ -8,7 +8,7 @@ Software requirement:
 Usage of older Unity version can cause some issues with Vuforia.
 
 
-Lesson 03
+Lesson 03 (Augmented Reality)
 ------
 See folder **Assets/ARVRSchool/Lesson 03/
 
@@ -20,7 +20,7 @@ See folder **Assets/ARVRSchool/Lesson 03/
 - Splitting tracking system and content with MarkerController
 
 
-Lesson 04
+Lesson 04 (Virtual Reality)
 ------
 See folder **Assets/ARVRSchool/Lesson 04/
 
@@ -29,7 +29,7 @@ See folder **Assets/ARVRSchool/Lesson 04/
 - Setup VR (PlayerSettings -> XRSettings)
 - Switch between modes (see ModeSwitcher.cs)
 
-Lesson 05
+Lesson 05 (Scripting)
 ------
 See folder **Assets/ARVRSchool/Lesson 05/
 
@@ -39,7 +39,7 @@ See folder **Assets/ARVRSchool/Lesson 05/
 
 ![alt text](https://github.com/alektros/ARVRSchoolLessons/blob/master/Assets/ARVRSchool/Lesson%2005/Doc/ARVRLessonProject.png)
 
-Lesson 06
+Lesson 06 (Scripting)
 ------
 See folder **Assets/ARVRSchool/Lesson 06/
 
@@ -52,7 +52,7 @@ See folder **Assets/ARVRSchool/Lesson 06/
 
 ![alt text](https://raw.githubusercontent.com/alektros/ARVRSchoolLessons/master/Assets/ARVRSchool/Lesson%2006/Doc/Lesson%2006.png)
 
-Lesson 07
+Lesson 07 (Shaders)
 ------
 See folder **Assets/ARVRSchool/Lesson 07/
 
