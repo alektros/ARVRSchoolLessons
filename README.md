@@ -61,3 +61,14 @@ See folder **Assets/ARVRSchool/Lesson 07/
 - Develop simple unlit shader with vertex and fragment shader's
 - Develop simple shader with mask using Shader Forge
 - Develop sample of script animation (BarrelAnimation.cs)
+
+
+Lesson 08 (Animations)
+------
+See folder **Assets/ARVRSchool/Lesson 08/
+
+**Key points:**
+- Sample of using legacy animations
+- Sample of using Mechanim
+- Sample of using Blend Shape's
+- Sample of setting Humanoid Avatar
